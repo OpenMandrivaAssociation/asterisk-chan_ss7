@@ -11,6 +11,7 @@ Source0:	http://www.sifira.dk/chan-ss7/0.8.2/%{rname}-%{version}.tar.bz2
 Patch0:		chan_ss7-0.8-missing_headers.diff
 BuildRequires:	asterisk-devel >= 1.2
 Requires:	asterisk >= 1.2
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 chan_ss7 is a channel driver for Asterisk that implements SS7
