@@ -3,7 +3,7 @@
 Summary:	This module adds SS7 protocol support to the Asterisk PBX
 Name:		asterisk-%{rname}
 Version:	1.0.91
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		System/Servers
 URL:		http://www.sifira.dk/chan-ss7/
