@@ -1,7 +1,7 @@
 %define rname	chan_ss7
 %define	version 1.2
-%define	asteriskversion 1.6.1.1
-%define release %mkrel %{asteriskversion}.0.0.svn.25.1
+%define	asterisk_version 1.6.1.1
+%define release %mkrel %{asterisk_version}.0.0.svn.25.1
 
 Summary:	This module adds SS7 protocol support to the Asterisk PBX
 Name:		asterisk-%{rname}
@@ -16,9 +16,9 @@ Source0:	%{rname}-%{version}.tar.gz
 # S1,S2 is from zaptel-1.4.10.1
 Source1:	mtp3d.rc
 Patch0:		chan_ss7-mdv.diff
-BuildRequires:	asterisk-devel >= %{asterisk-version}
+BuildRequires:	asterisk-devel = %{asterisk_version}
 BuildRequires:	tonezone-devel
-Requires:	asterisk >= %{asterisk-version}
+Requires:	asterisk = %{asterisk_version}
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
@@ -35,7 +35,7 @@ sed 's/lib/%{_lib}/g' -i Makefile
 
 # clean up CVS stuff
 for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type f -name .#\*`; do
-    if [ -e "$i" ]; then rm -r $i; fi >&/dev/null
+	if [ -e "$i" ]; then rm -r $i; fi >&/dev/null
 done
     
 # fix dir perms
