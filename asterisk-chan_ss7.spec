@@ -1,6 +1,6 @@
 %define rname	chan_ss7
 %define	version 1.2
-%define	asterisk_version 1.6.1.1
+%define	asterisk_version 1.6.1.2
 %define release %mkrel %{asterisk_version}.0.0.svn.25.1
 
 Summary:	This module adds SS7 protocol support to the Asterisk PBX
