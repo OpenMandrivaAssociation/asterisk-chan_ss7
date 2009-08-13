@@ -1,7 +1,7 @@
 %define rname	chan_ss7
-%define	version 1.2
-%define	asterisk_version 1.6.1.2
-%define release %mkrel %{asterisk_version}.0.0.svn.25.1
+%define	version 1.2.1
+%define	asterisk_version 1.6.1.4
+%define release %mkrel %{asterisk_version}.1
 
 Summary:	This module adds SS7 protocol support to the Asterisk PBX
 Name:		asterisk-%{rname}
@@ -9,16 +9,15 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Servers
-URL:		http://www.sifira.dk/chan-ss7/
+URL:		http://www.dicea.dk/company/downloads
 # svn http://svn.dicea.dk/chan_ss7/trunk/
-Source0:	%{rname}-%{version}.tar.gz
-#Source0:	http://www.dicea.dk/download/%{rname}-%{version}.tar.gz
+Source0:	http://www.dicea.dk/download/%{rname}-%{version}.tar.gz
 # S1,S2 is from zaptel-1.4.10.1
 Source1:	mtp3d.rc
 Patch0:		chan_ss7-mdv.diff
 BuildRequires:	asterisk-devel = %{asterisk_version}
 BuildRequires:	tonezone-devel
-Requires:	asterisk = %{asterisk_version}
+Requires:	asterisk >= %{asterisk_version}
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
