@@ -1,0 +1,22 @@
+diff -ru chan_ss7-1.2.orig/Makefile chan_ss7-1.2/Makefile
+--- chan_ss7-1.2.orig/Makefile	2009-07-22 11:54:48.000000000 +0200
++++ chan_ss7-1.2/Makefile	2009-07-22 13:58:38.000000000 +0200
+@@ -18,7 +18,7 @@
+ CFLAGS+=-DCHAN_SS7_VERSION=\"$(VERSION)\"
+ #CFLAGS+=-DMTP_OVER_UDP
+ #CFLAGS+=-DTESTINPUT
+-
++CFLAGS+=$(RPM_OPT_FLAGS)
+ # -DMODULETEST
+ 
+ SOLINK=-shared
+@@ -114,6 +114,8 @@
+ 	install -m 755 -d $(INSTALL_PREFIX)/lib/modules
+ 	install -m 644 chan_ss7.so $(INSTALL_PREFIX)/lib/modules
+ 	install -m 755 mtp3d $(INSTALL_PREFIX)/sbin
++	install -m 755 mtp3cli $(INSTALL_PREFIX)/bin
++	install -m 755 safe_mtp3d $(INSTALL_PREFIX)/sbin
+ 
+ clean:
+ 	rm -f chan_ss7.so mtp3d $(ALLOBJS) mtp_standalone.o transport_standalone.o utils_standalone.o config_standalone.o .depend
+
