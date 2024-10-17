@@ -8,7 +8,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		System/Servers
-URL:		http://www.dicea.dk/company/downloads
+URL:		https://www.dicea.dk/company/downloads
 # svn http://svn.dicea.dk/chan_ss7/trunk/
 Source0:	http://www.dicea.dk/download/%{rname}-%{version}.tar.gz
 # S1,S2 is from zaptel-1.4.10.1
