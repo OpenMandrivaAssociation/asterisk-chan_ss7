@@ -14,6 +14,7 @@ Source0:	http://www.dicea.dk/download/%{rname}-%{version}.tar.gz
 # S1,S2 is from zaptel-1.4.10.1
 Source1:	mtp3d.rc
 Patch0:		chan_ss7-mdv.diff
+BuildRequires:	make
 BuildRequires:	asterisk-devel >= 1.6.2.0
 BuildRequires:	tonezone-devel
 Requires:	asterisk >= 1.6.2.0
